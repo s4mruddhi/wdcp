@@ -1,0 +1,246 @@
+/* Global Animation Keyframes */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes slideLeft {
+  from { transform: translateX(30px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideRight {
+  from { transform: translateX(-30px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes scaleIn {
+  from { transform: scale(0.95); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+/* Page Load Animations */
+.page-content {
+  animation: fadeIn 0.5s ease-out;
+}
+
+/* Header Animations */
+header {
+  animation: slideDown 0.6s ease-out;
+}
+
+header h1, header h2 {
+  animation: fadeIn 0.8s ease-out;
+}
+
+/* Navigation Animations */
+nav {
+  animation: slideDown 0.7s ease-out;
+}
+
+nav a {
+  transition: all 0.3s ease;
+}
+
+nav a:hover {
+  transform: translateY(-2px);
+  color: var(--primary-color);
+}
+
+/* Section Animations */
+section {
+  animation: slideUp 0.8s ease-out;
+}
+
+section h2 {
+  animation: slideLeft 0.6s ease-out;
+}
+
+section p {
+  animation: slideRight 0.6s ease-out;
+}
+
+/* Card Animations */
+.card {
+  animation: scaleIn 0.5s ease-out;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Image Animations */
+img {
+  transition: transform 0.5s ease;
+}
+
+.card:hover img {
+  transform: scale(1.05);
+}
+
+/* Button Animations */
+.btn {
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+/* Form Animations */
+form {
+  animation: scaleIn 0.6s ease-out;
+}
+
+input, textarea, select {
+  transition: all 0.3s ease;
+}
+
+input:focus, textarea:focus, select:focus {
+  transform: scale(1.02);
+  box-shadow: 0 0 0 2px var(--primary-color);
+}
+
+/* List Animations */
+ul, ol {
+  animation: slideRight 0.6s ease-out;
+}
+
+li {
+  animation: fadeIn 0.5s ease-out;
+  transition: transform 0.3s ease;
+}
+
+li:hover {
+  transform: translateX(5px);
+}
+
+/* Table Animations */
+table {
+  animation: scaleIn 0.6s ease-out;
+}
+
+tr {
+  transition: background-color 0.3s ease;
+}
+
+tr:hover {
+  background-color: var(--bg-secondary);
+}
+
+/* Footer Animations */
+footer {
+  animation: slideUp 0.6s ease-out;
+}
+
+/* Loading Animation */
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.loading {
+  background: linear-gradient(90deg, 
+    var(--card-bg) 25%, 
+    var(--bg-secondary) 50%, 
+    var(--card-bg) 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+/* Icon Animations */
+.icon {
+  transition: transform 0.3s ease;
+}
+
+.icon:hover {
+  transform: scale(1.2) rotate(5deg);
+}
+
+/* Social Media Icons */
+.social-icon {
+  transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+  transform: translateY(-5px) scale(1.1);
+}
+
+/* Dark Mode Animation Adjustments */
+body.dark .card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+body.dark .btn:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Smooth Theme Transition */
+body {
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.card,
+.btn,
+input,
+textarea,
+select,
+nav a {
+  transition: background-color 0.5s ease, 
+              color 0.5s ease, 
+              border-color 0.5s ease,
+              box-shadow 0.5s ease;
+}
+
+/* Responsive Animation Adjustments */
+@media (max-width: 768px) {
+  .card:hover {
+    transform: translateY(-4px);
+  }
+  
+  .btn:hover {
+    transform: translateY(-1px);
+  }
+  
+  .social-icon:hover {
+    transform: translateY(-3px) scale(1.05);
+  }
+}
+
+/* Print Mode - Disable Animations */
+@media print {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+} 

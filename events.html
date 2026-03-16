@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta tags for character encoding and responsive viewport -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Youth & Sports Empower | Events</title>
+    
+    <!-- Favicon and CSS stylesheets -->
+    <link rel="shortcut icon" href="/assets/icons/pagephoto.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="/css/textchange.css">
+    <link rel="stylesheet" href="css/chatbot.css">
+    <link rel="stylesheet" href="css/backgrounds.css">
+    
+    <!-- External CSS libraries -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/events.css">
+    <link rel="stylesheet" href="css/voice-assistant.css">
+    <script src="js/voice-assistant.js"></script>
+</head>
+
+<body data-page="events">
+    <!-- Language selection dropdown for website translation -->
+    <select id="custom-translate">
+        <option value="en">🌐 English</option>
+        <option value="hi">🇮🇳 Hindi</option>
+        <option value="es">🇪🇸 Spanish</option>
+        <option value="fr">🇫🇷 French</option>
+        <option value="de">🇩🇪 German</option>
+        <option value="zh-CN">🇨🇳 Chinese</option>
+    </select>
+    
+    <!-- Google Translate widget (hidden but functional) -->
+    <div id="google_translate_element" style="display: none;"></div>
+    
+    <!-- Interactive Chatbot Interface -->
+    <div id="chatbot-container">
+        <div id="chatbot-header">🏅 Ask Me About Sports</div>
+        <div id="chat-box"></div>
+        <input type="text" id="chat-input" placeholder="Ask about football, cricket, etc..." />
+    </div>
+
+    <!-- Chatbot related files -->
+    <link rel="stylesheet" href="chatbot.css" />
+    <script src="chatbot.js" defer></script>
+
+    <!-- Main Header Section -->
+    <header>
+        <!-- Logo and Organization Name -->
+        <div class="logo">
+            <img src="assets/images/logo.png" alt="Youth & Sports Empower Logo">
+            <h1>Youth & Sports Empower</h1>
+        </div>
+        
+        <!-- Navigation Menu -->
+        <nav>
+            <!-- Mobile Menu Hamburger Icon -->
+            <div class="hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+            <!-- Navigation Links -->
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="events.html" class="active">Events</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="schemes.html">Schemes</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <!-- Dark/Light Theme Toggle -->
+        <div class="theme-toggle">
+            <i class="fas fa-moon"></i>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section with Page Title -->
+        <section class="events-hero">
+            <h1>Upcoming Events</h1>
+            <p>Join us in our mission to empower youth through sports and development programs</p>
+        </section>
+
+        <!-- Events Search and Filter Section -->
+        <section class="events-filter">
+            <!-- Search Box -->
+            <div class="search-box">
+                <input type="text" id="event-search" placeholder="Search events...">
+                <i class="fas fa-search"></i>
+            </div>
+            <!-- Filter Options -->
+            <div class="filter-options">
+                <!-- Category Filter Dropdown -->
+                <select id="category-filter">
+                    <option value="all">All Categories</option>
+                    <option value="sports">Sports</option>
+                    <option value="youth">Youth Development</option>
+                    <option value="training">Training</option>
+                    <option value="competition">Competitions</option>
+                </select>
+                <!-- Location Filter Dropdown -->
+                <select id="location-filter">
+                    <option value="all">All Locations</option>
+                    <option value="delhi">Delhi</option>
+                    <option value="mumbai">Mumbai</option>
+                    <option value="bangalore">Bangalore</option>
+                    <option value="chennai">Chennai</option>
+                </select>
+            </div>
+        </section>
+
+        <!-- Interactive Calendar Section -->
+        <section class="events-calendar">
+            <!-- Calendar Navigation -->
+            <div class="calendar-header">
+                <button id="prev-month"><i class="fas fa-chevron-left"></i></button>
+                <h2 id="current-month">June 2024</h2>
+                <button id="next-month"><i class="fas fa-chevron-right"></i></button>
+            </div>
+            <!-- Calendar Grid -->
+            <div class="calendar-grid">
+                <!-- Day Headers -->
+                <div class="calendar-days">
+                    <span>Sun</span>
+                    <span>Mon</span>
+                    <span>Tue</span>
+                    <span>Wed</span>
+                    <span>Thu</span>
+                    <span>Fri</span>
+                    <span>Sat</span>
+                </div>
+                <!-- Calendar Dates (Populated by JavaScript) -->
+                <div id="calendar-dates" class="calendar-dates">
+                    <!-- Calendar dates will be populated by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Events Section -->
+        <section class="upcoming-events">
+            <h2>Featured Events</h2>
+            <div class="events-grid">
+                <!-- Event Card 1: National Youth Sports Championship -->
+                <div class="event-card" data-category="sports" data-location="delhi">
+                    <div class="event-date">
+                        <span class="day">15</span>
+                        <span class="month">Jun</span>
+                    </div>
+                    <div class="event-details">
+                        <h3>National Youth Sports Championship</h3>
+                        <p class="event-location"><i class="fas fa-map-marker-alt"></i> New Delhi</p>
+                        <p class="event-description">Annual sports championship featuring various disciplines for youth athletes.</p>
+                        <div class="event-meta">
+                            <span><i class="fas fa-clock"></i> 9:00 AM - 5:00 PM</span>
+                            <span><i class="fas fa-users"></i> 500+ Participants</span>
+                        </div>
+                    </div>
+                    <button class="btn-register">Register Now</button>
+                </div>
+
+                <!-- Event Card 2: Leadership Training Workshop -->
+                <div class="event-card" data-category="training" data-location="mumbai">
+                    <div class="event-date">
+                        <span class="day">22</span>
+                        <span class="month">Jun</span>
+                    </div>
+                    <div class="event-details">
+                        <h3>Leadership Training Workshop</h3>
+                        <p class="event-location"><i class="fas fa-map-marker-alt"></i> Mumbai</p>
+                        <p class="event-description">Intensive workshop focusing on developing leadership skills in young athletes.</p>
+                        <div class="event-meta">
+                            <span><i class="fas fa-clock"></i> 10:00 AM - 4:00 PM</span>
+                            <span><i class="fas fa-users"></i> 100 Participants</span>
+                        </div>
+                    </div>
+                    <button class="btn-register">Register Now</button>
+                </div>
+
+                <!-- Event Card 3: Inter-State Athletics Meet -->
+                <div class="event-card" data-category="competition" data-location="bangalore">
+                    <div class="event-date">
+                        <span class="day">30</span>
+                        <span class="month">Jun</span>
+                    </div>
+                    <div class="event-details">
+                        <h3>Inter-State Athletics Meet</h3>
+                        <p class="event-location"><i class="fas fa-map-marker-alt"></i> Bangalore</p>
+                        <p class="event-description">Track and field competition featuring top athletes from across states.</p>
+                        <div class="event-meta">
+                            <span><i class="fas fa-clock"></i> 8:00 AM - 6:00 PM</span>
+                            <span><i class="fas fa-users"></i> 300+ Participants</span>
+                        </div>
+                    </div>
+                    <button class="btn-register">Register Now</button>
+                </div>
+
+                <!-- Event Card 4: Youth Entrepreneurship Summit -->
+                <div class="event-card" data-category="youth" data-location="chennai">
+                    <div class="event-date">
+                        <span class="day">07</span>
+                        <span class="month">Jul</span>
+                    </div>
+                    <div class="event-details">
+                        <h3>Youth Entrepreneurship Summit</h3>
+                        <p class="event-location"><i class="fas fa-map-marker-alt"></i> Chennai</p>
+                        <p class="event-description">Conference connecting young entrepreneurs with investors and mentors in the sports industry.</p>
+                        <div class="event-meta">
+                            <span><i class="fas fa-clock"></i> 9:30 AM - 5:30 PM</span>
+                            <span><i class="fas fa-users"></i> 250 Participants</span>
+                        </div>
+                    </div>
+                    <button class="btn-register">Register Now</button>
+                </div>
+
+                <!-- Event Card 5: Sports Nutrition Workshop -->
+                <div class="event-card" data-category="training" data-location="delhi">
+                    <div class="event-date">
+                        <span class="day">12</span>
+                        <span class="month">Jul</span>
+                    </div>
+                    <div class="event-details">
+                        <h3>Sports Nutrition Workshop</h3>
+                        <p class="event-location"><i class="fas fa-map-marker-alt"></i> New Delhi</p>
+                        <p class="event-description">Expert-led workshop on nutrition strategies for optimal athletic performance and recovery.</p>
+                        <div class="event-meta">
+                            <span><i class="fas fa-clock"></i> 10:00 AM - 3:00 PM</span>
+                            <span><i class="fas fa-users"></i> 75 Participants</span>
+                        </div>
+                    </div>
+                    <button class="btn-register">Register Now</button>
+                </div>
+
+                <!-- Event Card 6: National Swimming Championship -->
+                <div class="event-card" data-category="competition" data-location="mumbai">
+                    <div class="event-date">
+                        <span class="day">18</span>
+                        <span class="month">Jul</span>
+                    </div>
+                    <div class="event-details">
+                        <h3>National Swimming Championship</h3>
+                        <p class="event-location"><i class="fas fa-map-marker-alt"></i> Mumbai</p>
+                        <p class="event-description">Premier aquatic competition featuring the country's best swimmers across multiple categories.</p>
+                        <div class="event-meta">
+                            <span><i class="fas fa-clock"></i> 8:00 AM - 7:00 PM</span>
+                            <span><i class="fas fa-users"></i> 200+ Participants</span>
+                        </div>
+                    </div>
+                    <button class="btn-register">Register Now</button>
+                </div>
+
+                <!-- Event Card 7: Youth Mental Health in Sports -->
+                <div class="event-card" data-category="youth" data-location="bangalore">
+                    <div class="event-date">
+                        <span class="day">25</span>
+                        <span class="month">Jul</span>
+                    </div>
+                    <div class="event-details">
+                        <h3>Youth Mental Health in Sports</h3>
+                        <p class="event-location"><i class="fas fa-map-marker-alt"></i> Bangalore</p>
+                        <p class="event-description">Conference focused on mental health awareness, resilience, and psychological support for young athletes.</p>
+                        <div class="event-meta">
+                            <span><i class="fas fa-clock"></i> 9:00 AM - 4:30 PM</span>
+                            <span><i class="fas fa-users"></i> 150 Participants</span>
+                        </div>
+                    </div>
+                    <button class="btn-register">Register Now</button>
+                </div>
+
+                <div class="event-card" data-category="sports" data-location="chennai">
+                    <div class="event-date">
+                        <span class="day">02</span>
+                        <span class="month">Aug</span>
+                    </div>
+                    <div class="event-details">
+                        <h3>Beach Volleyball Tournament</h3>
+                        <p class="event-location"><i class="fas fa-map-marker-alt"></i> Chennai</p>
+                        <p class="event-description">Exciting beach volleyball competition with men's, women's, and
+                            mixed team categories.</p>
+                        <div class="event-meta">
+                            <span><i class="fas fa-clock"></i> 7:30 AM - 6:00 PM</span>
+                            <span><i class="fas fa-users"></i> 32 Teams</span>
+                        </div>
+                    </div>
+                    <button class="btn-register">Register Now</button>
+                </div>
+
+                <div class="event-card" data-category="training" data-location="delhi">
+                    <div class="event-date">
+                        <span class="day">10</span>
+                        <span class="month">Aug</span>
+                    </div>
+                    <div class="event-details">
+                        <h3>Sports Technology Expo</h3>
+                        <p class="event-location"><i class="fas fa-map-marker-alt"></i> New Delhi</p>
+                        <p class="event-description">Exhibition showcasing the latest innovations in sports technology,
+                            equipment, and performance analytics.</p>
+                        <div class="event-meta">
+                            <span><i class="fas fa-clock"></i> 10:00 AM - 6:00 PM</span>
+                            <span><i class="fas fa-users"></i> Open to Public</span>
+                        </div>
+                    </div>
+                    <button class="btn-register">Register Now</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Registration Modal -->
+        <div id="registration-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h2>Event Registration</h2>
+                <form id="registration-form">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="age">Age</label>
+                        <input type="number" id="age" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="category">Category</label>
+                        <select id="category" required>
+                            <option value="">Select Category</option>
+                            <option value="junior">Junior (Under 18)</option>
+                            <option value="senior">Senior (18-25)</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn">Submit Registration</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="schemes.html">Schemes</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="#">Annual Reports</a></li>
+                        <li><a href="#">Research Papers</a></li>
+                        <li><a href="#">Policies</a></li>
+                        <li><a href="#">Press Releases</a></li>
+                        <li><a href="#">FAQs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Connect With Us</h3>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Youth & Sports Empower. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <button class="assistant-toggle" title="Voice Assistant">
+        <i class="fas fa-microphone"></i>
+    </button>
+
+    <div class="assistant-panel">
+        <div class="assistant-header">
+            <h3>Voice Assistant</h3>
+            <button class="close-assistant">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="voice-controls">
+            <button id="start-voice" title="Start Voice Recognition">
+                <i class="fas fa-microphone"></i>
+            </button>
+            <div class="voice-status">Click to speak</div>
+        </div>
+        <div class="voice-commands">
+            <h4>Available Commands:</h4>
+            <ul>
+                <li>"Go to [page name]" - Navigate to a page</li>
+                <li>"Read [section name]" - Read section content</li>
+                <li>"Dark mode" / "Light mode" - Toggle theme</li>
+                <li>"Help" - List available commands</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/events.js"></script>
+    <script src="js/chatbot.js" defer></script>
+    <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script src="/js/textchange.js"></script>
+</body>
+
+</html>

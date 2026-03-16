@@ -1,0 +1,47 @@
+/* textchange.css */
+
+/* Style the custom language dropdown */
+#custom-translate {
+  position: fixed;
+  top: 80px;
+  right: 15px;
+  padding: 6px 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  z-index: 9999;
+}
+
+/* Hide Google Translate top banner */
+.goog-te-banner-frame.skiptranslate {
+  display: none !important;
+}
+
+/* Prevent the banner from pushing content down */
+body {
+  top: 0 !important;
+  position: relative;
+}
+
+/* Hide Google Translate logo, gadget, tooltips, and highlights */
+.goog-logo-link,
+.goog-te-gadget span,
+#goog-gt-tt,
+.goog-te-balloon-frame,
+.goog-text-highlight {
+  display: none !important;
+}
+
+/* Hide the Google Translate menu iframe */
+.goog-te-menu-frame {
+  display: none !important;
+}
+
+/* Hide mini popup bottom right */
+.VIpgJd-ZVi9od-ORHb-OEVmcd {
+  display: none !important;
+}
+
+/* Hide the iframe for the banner explicitly */
+iframe.goog-te-banner-frame {
+  display: none !important;
+}

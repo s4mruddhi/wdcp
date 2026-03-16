@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta tags for character encoding and responsive viewport -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Youth & Sports Empower | Home</title>
+    
+    <!-- Favicon and CSS stylesheets -->
+    <link rel="shortcut icon" href="/assets/icons/pagephoto.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/backgrounds.css">
+    <link rel="stylesheet" href="css/chatbot.css">
+    <link rel="stylesheet" href="/css/textchange.css">
+    
+    <!-- External CSS libraries -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/voice-assistant.css">
+    <script src="js/voice-assistant.js"></script>
+</head>
+
+<body data-page="home">
+    <!-- Language selection dropdown for website translation -->
+    <select id="custom-translate">
+        <option value="en">🌐 English</option>
+        <option value="hi">🇮🇳 Hindi</option>
+        <option value="es">🇪🇸 Spanish</option>
+        <option value="fr">🇫🇷 French</option>
+        <option value="de">🇩🇪 German</option>
+        <option value="zh-CN">🇨🇳 Chinese</option>
+    </select>
+
+    <!-- Google Translate widget (hidden but functional) -->
+    <div id="google_translate_element" style="display: none;"></div>
+    
+    <!-- Interactive Chatbot Interface -->
+    <div id="chatbot-container">
+        <div id="chatbot-header">🏅 Ask Me About Sports</div>
+        <div id="chat-box"></div>
+        <input type="text" id="chat-input" placeholder="Ask about football, cricket, etc..." />
+    </div>
+
+    <!-- Chatbot related files -->
+    <link rel="stylesheet" href="chatbot.css" />
+    <script src="chatbot.js" defer></script>
+
+    <!-- Main Header Section -->
+    <header>
+        <!-- Logo and Organization Name -->
+        <div class="logo">
+            <img src="assets/images/logo.png" alt="Youth & Sports Empower Logo">
+            <h1>Youth & Sports Empower</h1>
+        </div>
+        
+        <!-- Navigation Menu -->
+        <nav>
+            <!-- Mobile Menu Hamburger Icon -->
+            <div class="hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+            <!-- Navigation Links -->
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="schemes.html">Schemes</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <!-- Dark/Light Theme Toggle -->
+        <div class="theme-toggle">
+            <i class="fas fa-moon"></i>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section with Image Slider -->
+        <section class="hero">
+            <div class="hero-slider">
+                <!-- Slide 1: Empowering Youth -->
+                <div class="slide active">
+                    <div class="slide-content">
+                        <h2>Empowering Youth Through Sports</h2>
+                        <p>Discover opportunities for growth, excellence, and national pride</p>
+                        <a href="schemes.html" class="btn">Explore Schemes</a>
+                    </div>
+                    <div class="slide-image" style="background-image: url('assets/images/hero1.jpg'); background-color: #1a73e8;"></div>
+                </div>
+                
+                <!-- Slide 2: Building Champions -->
+                <div class="slide">
+                    <div class="slide-content">
+                        <h2>Building Champions of Tomorrow</h2>
+                        <p>Supporting athletes from grassroots to international competitions</p>
+                        <a href="events.html" class="btn">Upcoming Events</a>
+                    </div>
+                    <div class="slide-image" style="background-image: url('assets/images/hero2.jpg'); background-color: #34a853;"></div>
+                </div>
+                
+                <!-- Slide 3: Youth Development -->
+                <div class="slide">
+                    <div class="slide-content">
+                        <h2>Youth-Led Development</h2>
+                        <p>Creating pathways for social engagement and leadership</p>
+                        <a href="about.html" class="btn">Learn More</a>
+                    </div>
+                    <div class="slide-image" style="background-image: url('assets/images/hero3.jpg'); background-color: #ea4335;"></div>
+                </div>
+            </div>
+            
+            <!-- Slider Navigation Controls -->
+            <div class="slider-controls">
+                <div class="slider-dots">
+                    <span class="dot active" data-slide="0"></span>
+                    <span class="dot" data-slide="1"></span>
+                    <span class="dot" data-slide="2"></span>
+                </div>
+                <div class="slider-arrows">
+                    <span class="arrow prev"><i class="fas fa-chevron-left"></i></span>
+                    <span class="arrow next"><i class="fas fa-chevron-right"></i></span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Statistics/Achievements Section -->
+        <section class="achievements">
+            <h2 class="section-title">Our Impact</h2>
+            <div class="counters">
+                <!-- Counter for Youth Trained -->
+                <div class="counter-item">
+                    <i class="fas fa-users"></i>
+                    <div class="counter" data-target="250000">0</div>
+                    <h3>Youth Trained</h3>
+                </div>
+                <!-- Counter for Medals Won -->
+                <div class="counter-item">
+                    <i class="fas fa-medal"></i>
+                    <div class="counter" data-target="1200">0</div>
+                    <h3>Medals Won</h3>
+                </div>
+                <!-- Counter for Active Schemes -->
+                <div class="counter-item">
+                    <i class="fas fa-handshake"></i>
+                    <div class="counter" data-target="45">0</div>
+                    <h3>Active Schemes</h3>
+                </div>
+                <!-- Counter for Centers Nationwide -->
+                <div class="counter-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div class="counter" data-target="720">0</div>
+                    <h3>Centers Nationwide</h3>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Schemes Section -->
+        <section class="featured-schemes">
+            <h2 class="section-title">Featured Schemes</h2>
+            <div class="schemes-container">
+                <!-- Khelo India Scheme Card -->
+                <div class="scheme-card">
+                    <div class="scheme-icon">
+                        <i class="fas fa-running"></i>
+                    </div>
+                    <h3>Khelo India</h3>
+                    <p>Reviving sports culture at the grassroots level through competitions and talent identification.</p>
+                    <a href="schemes.html#khelo-india" class="btn-outline">Read More</a>
+                </div>
+                
+                <!-- TOP Scheme Card -->
+                <div class="scheme-card">
+                    <div class="scheme-icon">
+                        <i class="fas fa-globe-asia"></i>
+                    </div>
+                    <h3>Target Olympic Podium</h3>
+                    <p>Supporting elite athletes with international training and competition exposure.</p>
+                    <a href="schemes.html#tops" class="btn-outline">Read More</a>
+                </div>
+                
+                <!-- NYC Scheme Card -->
+                <div class="scheme-card">
+                    <div class="scheme-icon">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <h3>National Youth Corps</h3>
+                    <p>Engaging youth in voluntary social service and community development programs.</p>
+                    <a href="schemes.html#nyc" class="btn-outline">Read More</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Latest News Section -->
+        <section id="home-news" class="news-section">
+            <h2 class="section-title">Latest News</h2>
+            <div class="news-container">
+                <!-- News Card 1: Youth Games -->
+                <div class="news-card" data-category="sports">
+                    <img src="assets/images/news1.jpg" alt="Youth Games 2025" />
+                    <h3>Youth Games 2025 Announced</h3>
+                    <p>Khelo India Youth Games 2025 to be hosted in Pune with 30+ sports.</p>
+                    <div class="news-meta">
+                        <span class="category">Sports</span>
+                        <span class="date">March 15, 2024</span>
+                    </div>
+                    <a href="news.html" class="btn-outline">Read More</a>
+                </div>
+
+                <!-- News Card 2: Rural Youth Scheme -->
+                <div class="news-card" data-category="youth">
+                    <img src="assets/images/news2.jpg" alt="Rural Youth Scheme" />
+                    <h3>New Scheme for Rural Youth</h3>
+                    <p>Govt launches rural sports initiative for underprivileged youth.</p>
+                    <div class="news-meta">
+                        <span class="category">Youth Programs</span>
+                        <span class="date">March 14, 2024</span>
+                    </div>
+                    <a href="news.html" class="btn-outline">Read More</a>
+                </div>
+
+                <!-- News Card 3: Asian Athletics -->
+                <div class="news-card" data-category="announcements">
+                    <img src="assets/images/news3.jpg" alt="Asian Athletics" />
+                    <h3>India Bags Gold in Asian Athletics</h3>
+                    <p>India's youth athletes win big at the Asian Athletics Championships 2025.</p>
+                    <div class="news-meta">
+                        <span class="category">Announcements</span>
+                        <span class="date">March 13, 2024</span>
+                    </div>
+                    <a href="news.html" class="btn-outline">Read More</a>
+                </div>
+            </div>
+            <div class="view-all">
+                <a href="news.html" class="btn">View All News</a>
+            </div>
+        </section>
+
+        <!-- Upcoming Events Section -->
+        <section class="latest-events">
+            <h2 class="section-title">Upcoming Events</h2>
+            <div class="events-container">
+                <!-- Event Card 1: National Youth Festival -->
+                <div class="event-card">
+                    <div class="event-date">
+                        <span class="day">15</span>
+                        <span class="month">Jun</span>
+                    </div>
+                    <div class="event-details">
+                        <h3>National Youth Festival</h3>
+                        <p class="event-location"><i class="fas fa-map-marker-alt"></i> New Delhi</p>
+                        <p class="event-description">Celebrating the spirit of youth with cultural performances, exhibits, and competitions.</p>
+                    </div>
+                    <a href="events.html#youth-festival" class="btn-small">Details</a>
+                </div>
+                
+                <!-- Event Card 2: Sports Talent Hunt -->
+                <div class="event-card">
+                    <div class="event-date">
+                        <span class="day">22</span>
+                        <span class="month">Jul</span>
+                    </div>
+                    <div class="event-details">
+                        <h3>Sports Talent Hunt</h3>
+                        <p class="event-location"><i class="fas fa-map-marker-alt"></i> Multiple Cities</p>
+                        <p class="event-description">Nationwide talent search for promising athletes in various Olympic sports.</p>
+                    </div>
+                    <a href="events.html#talent-hunt" class="btn-small">Details</a>
+                </div>
+            </div>
+            <div class="view-all">
+                <a href="events.html" class="btn">View All Events</a>
+            </div>
+        </section>
+
+        <!-- Success Stories/Testimonials Section -->
+        <section class="testimonials">
+            <h2 class="section-title">Success Stories</h2>
+            <div class="testimonials-container">
+                <div class="testimonial active">
+                    <div class="testimonial-image">
+                        <img src="assets/images/testimonial1.jpg" alt="Athlete Portrait">
+                    </div>
+                    <div class="testimonial-content">
+                        <p>"The support from the ministry's sports initiatives helped me transition from a small-town
+                            athlete to representing India internationally."</p>
+                        <h4>Rani Sharma</h4>
+                        <p class="testimonial-role">Olympic Medalist, Hockey</p>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-image">
+                        <img src="assets/images/testimonial2.jpg" alt="Youth Leader Portrait">
+                    </div>
+                    <div class="testimonial-content">
+                        <p>"National Youth Corps gave me a platform to implement my ideas for community development and
+                            build valuable leadership skills."</p>
+                        <h4>Arjun Patel</h4>
+                        <p class="testimonial-role">Youth Leader, Maharashtra</p>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-controls">
+                <span class="testimonial-dot active" data-testimonial="0"></span>
+                <span class="testimonial-dot" data-testimonial="1"></span>
+            </div>
+        </section>
+
+        <!-- Newsletter Section -->
+        <section class="newsletter">
+            <div class="newsletter-content">
+                <h2>Stay Updated</h2>
+                <p>Subscribe to our newsletter for the latest news on schemes, events, and opportunities.</p>
+                <form id="newsletter-form">
+                    <div class="form-group">
+                        <input type="email" id="email" placeholder="Your Email Address" required>
+                        <button type="submit" class="btn">Subscribe</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="schemes.html">Schemes</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="#">Annual Reports</a></li>
+                        <li><a href="#">Research Papers</a></li>
+                        <li><a href="#">Policies</a></li>
+                        <li><a href="#">Press Releases</a></li>
+                        <li><a href="#">FAQs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Connect With Us</h3>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                    <p class="contact-info">
+                        <i class="fas fa-phone"></i> Toll Free: 1800-XXX-XXXX<br>
+                        <i class="fas fa-envelope"></i> contact@youthsports.gov.in
+                    </p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Youth & Sports Empower. All Rights Reserved.</p>
+                <p>
+                    <a href="#">Privacy Policy</a> |
+                    <a href="#">Terms of Service</a> |
+                    <a href="#">Sitemap</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <button class="assistant-toggle" title="Voice Assistant">
+        <i class="fas fa-microphone"></i>
+    </button>
+
+    <div class="assistant-panel">
+        <div class="assistant-header">
+            <h3>Voice Assistant</h3>
+            <button class="close-assistant">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="voice-controls">
+            <button id="start-voice" title="Start Voice Recognition">
+                <i class="fas fa-microphone"></i>
+            </button>
+            <div class="voice-status">Click to speak</div>
+        </div>
+        <div class="voice-commands">
+            <h4>Available Commands:</h4>
+            <ul>
+                <li>"Go to [page name]" - Navigate to a page</li>
+                <li>"Read [section name]" - Read section content</li>
+                <li>"Dark mode" / "Light mode" - Toggle theme</li>
+                <li>"Help" - List available commands</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script src="/js/textchange.js"></script>
+    <script src="js/chatbot.js" defer></script>
+    <script src="/js/voice-assistant.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,486 @@
+/* Schemes Page Styles */
+
+/* Hero Section */
+.schemes-hero {
+    margin-top: 80px;
+    padding: 4rem 5%;
+    text-align: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../assets/images/schemes-hero.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    background-color: var(--primary-color); /* Fallback if image is missing */
+}
+
+.schemes-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.schemes-hero p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* Filter Section */
+.schemes-filter {
+    padding: 2rem 5%;
+    background: var(--card-bg);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.search-box {
+    position: relative;
+    flex: 1;
+    min-width: 250px;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    padding-right: 3rem;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.search-box i {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--light-text);
+}
+
+.filter-options {
+    display: flex;
+    gap: 1rem;
+}
+
+.filter-options select {
+    padding: 0.8rem 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 1rem;
+    background: var(--background);
+    color: var(--text-color);
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Schemes Grid */
+.schemes-grid {
+    padding: 4rem 5%;
+    background: var(--card-bg);
+}
+
+.schemes-grid h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.schemes-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.scheme-card {
+    display: flex;
+    flex-direction: column;
+    background: var(--background);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: var(--transition);
+    height: 100%;
+}
+
+.scheme-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+.scheme-icon {
+    background: var(--primary-color);
+    color: white;
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.scheme-content {
+    padding: 1.5rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.scheme-content h3 {
+    color: var(--text-color);
+    margin-bottom: 0.8rem;
+    font-size: 1.3rem;
+}
+
+.scheme-description {
+    color: var(--light-text);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.scheme-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin-bottom: 1.5rem;
+    margin-top: auto;
+}
+
+.detail-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--text-color);
+    font-size: 0.9rem;
+}
+
+.detail-item i {
+    color: var(--primary-color);
+    font-size: 1rem;
+}
+
+.btn-details {
+    width: 100%;
+    padding: 0.8rem;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 0 0 8px 8px;
+    cursor: pointer;
+    transition: var(--transition);
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    margin-top: auto;
+}
+
+.btn-details:hover {
+    background: var(--secondary-color);
+    transform: translateY(-2px);
+}
+
+/* No Results Message */
+.no-results-message {
+    text-align: center;
+    padding: 2rem;
+    background: var(--card-bg);
+    border-radius: 8px;
+    margin: 2rem 0;
+}
+
+.no-results-message p {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    color: var(--text-color);
+}
+
+.reset-filters {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: var(--transition);
+    font-family: 'Poppins', sans-serif;
+}
+
+.reset-filters:hover {
+    background: var(--secondary-color);
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    overflow-y: auto;
+}
+
+.modal.active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background: var(--background);
+    border-radius: 8px;
+    width: 90%;
+    max-width: 800px;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    padding: 0;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.close-modal {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: var(--light-text);
+    z-index: 10;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+}
+
+.close-modal:hover {
+    color: var(--text-color);
+    background: rgba(255, 255, 255, 0.4);
+}
+
+#scheme-details-content {
+    padding: 2rem;
+}
+
+.modal-header {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.modal-icon {
+    font-size: 3rem;
+    color: var(--primary-color);
+    background: rgba(26, 115, 232, 0.1);
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.modal-header h2 {
+    font-size: 2rem;
+    color: var(--text-color);
+    margin: 0;
+}
+
+.modal-description {
+    line-height: 1.8;
+    color: var(--text-color);
+    margin-bottom: 2rem;
+}
+
+.modal-info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    background: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+
+.info-item h4 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.modal-section {
+    margin-bottom: 2rem;
+}
+
+.modal-section h4 {
+    color: var(--text-color);
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    position: relative;
+    padding-left: 1rem;
+}
+
+.modal-section h4::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 4px;
+    background: var(--primary-color);
+    border-radius: 2px;
+}
+
+.modal-section ol,
+.modal-section ul {
+    padding-left: 1.5rem;
+    color: var(--text-color);
+}
+
+.modal-section li {
+    margin-bottom: 0.5rem;
+}
+
+.application-section {
+    padding: 2rem;
+    background: var(--card-bg);
+    border-top: 1px solid var(--border-color);
+}
+
+.application-section h3 {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    background: var(--background);
+    color: var(--text-color);
+}
+
+/* Dark mode scheme card improvements */
+[data-theme="dark"] .scheme-card {
+    background: #2c2c2c;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+[data-theme="dark"] .scheme-content {
+    background: #2c2c2c;
+}
+
+[data-theme="dark"] .scheme-content h3 {
+    color: #ffffff;
+}
+
+[data-theme="dark"] .scheme-description {
+    color: #cccccc;
+}
+
+[data-theme="dark"] .detail-item {
+    color: #cccccc;
+}
+
+[data-theme="dark"] .no-results-message {
+    background: #2c2c2c;
+    color: #ffffff;
+    border: 1px solid #444444;
+}
+
+/* Dark mode modal improvements */
+[data-theme="dark"] .modal-content {
+    background: #2c2c2c;
+    border: 1px solid #444444;
+}
+
+[data-theme="dark"] .modal-header {
+    border-bottom: 1px solid #444444;
+}
+
+[data-theme="dark"] .modal-header h2 {
+    color: #ffffff;
+}
+
+[data-theme="dark"] .modal-description {
+    color: #cccccc;
+}
+
+[data-theme="dark"] .info-item h4 {
+    color: #ffffff;
+}
+
+[data-theme="dark"] .info-item p {
+    color: #cccccc;
+}
+
+[data-theme="dark"] .modal-section h4 {
+    color: #ffffff;
+    border-bottom: 1px solid #444444;
+}
+
+[data-theme="dark"] .modal-section li {
+    color: #cccccc;
+}
+
+[data-theme="dark"] .form-group input,
+[data-theme="dark"] .form-group select {
+    background: #3a3a3a;
+    border: 1px solid #444444;
+    color: #ffffff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .schemes-hero h1 {
+        font-size: 2rem;
+    }
+    
+    .schemes-filter {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .filter-options {
+        flex-direction: column;
+    }
+    
+    .scheme-card {
+        flex-direction: column;
+    }
+    
+    .scheme-icon {
+        padding: 1.5rem;
+        width: 100%;
+    }
+    
+    .modal-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .modal-info-grid {
+        grid-template-columns: 1fr;
+    }
+} 

@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta tags for character encoding and responsive viewport -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Youth & Sports Empower | About</title>
+    
+    <!-- Favicon and CSS stylesheets -->
+    <link rel="shortcut icon" href="/assets/icons/pagephoto.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/backgrounds.css">
+    <link rel="stylesheet" href="css/chatbot.css">
+    <link rel="stylesheet" href="/css/textchange.css">
+    
+    <!-- External CSS libraries -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/voice-assistant.css">
+    <script src="js/voice-assistant.js"></script>
+</head>
+
+<body data-page="about">
+    <!-- Language selection dropdown for website translation -->
+    <select id="custom-translate">
+        <option value="en">🌐 English</option>
+        <option value="hi">🇮🇳 Hindi</option>
+        <option value="es">🇪🇸 Spanish</option>
+        <option value="fr">🇫🇷 French</option>
+        <option value="de">🇩🇪 German</option>
+        <option value="zh-CN">🇨🇳 Chinese</option>
+    </select>
+    
+    <!-- Google Translate widget (hidden but functional) -->
+    <div id="google_translate_element" style="display: none;"></div>
+    
+    <!-- Interactive Chatbot Interface -->
+    <div id="chatbot-container">
+        <div id="chatbot-header">🏅 Ask Me About Sports</div>
+        <div id="chat-box"></div>
+        <input type="text" id="chat-input" placeholder="Ask about football, cricket, etc..." />
+    </div>
+
+    <!-- Chatbot related files -->
+    <link rel="stylesheet" href="chatbot.css" />
+    <script src="chatbot.js" defer></script>
+
+    <!-- Main Header Section -->
+    <header>
+        <!-- Logo and Organization Name -->
+        <div class="logo">
+            <img src="assets/images/logo.png" alt="Youth & Sports Empower Logo">
+            <h1>Youth & Sports Empower</h1>
+        </div>
+        
+        <!-- Navigation Menu -->
+        <nav>
+            <!-- Mobile Menu Hamburger Icon -->
+            <div class="hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+            <!-- Navigation Links -->
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="schemes.html">Schemes</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <!-- Dark/Light Theme Toggle -->
+        <div class="theme-toggle">
+            <i class="fas fa-moon"></i>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section with Organization Overview -->
+        <section class="about-hero">
+            <h1>About Youth & Sports Empower</h1>
+            <p>Dedicated to nurturing youth talent, promoting sports excellence, and creating pathways for holistic development across India</p>
+        </section>
+
+        <!-- Mission and Vision Section -->
+        <section class="mission-vision">
+            <!-- Mission Statement -->
+            <div class="mission">
+                <i class="fas fa-bullseye"></i>
+                <h2>Our Mission</h2>
+                <p>To create an ecosystem where every young Indian has access to quality sports infrastructure, training, and opportunities for personal growth, fostering a culture of excellence and national pride through sports and youth development programs.</p>
+            </div>
+            <!-- Vision Statement -->
+            <div class="vision">
+                <i class="fas fa-eye"></i>
+                <h2>Our Vision</h2>
+                <p>To establish India as a sporting powerhouse on the global stage while empowering youth to become catalysts for positive social change, contributing to the nation's progress through their energy, ideas, and leadership.</p>
+            </div>
+        </section>
+
+        <!-- Historical Timeline Section -->
+        <section class="timeline-section">
+            <h2 class="section-title">Our Journey</h2>
+            <div class="timeline">
+                <!-- Timeline Item 1: Foundation -->
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <h3>Foundation</h3>
+                        <div class="date">1950</div>
+                        <p>Establishment of the Ministry of Youth Affairs to channel the energy of independent India's youth towards nation-building activities.</p>
+                    </div>
+                </div>
+                
+                <!-- Timeline Item 2: Sports Integration -->
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <h3>Sports Integration</h3>
+                        <div class="date">1982</div>
+                        <p>Merger with Sports department after the successful Asian Games in Delhi, expanding focus to include athletic development.</p>
+                    </div>
+                </div>
+                
+                <!-- Timeline Item 3: National Youth Policy -->
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <h3>National Youth Policy</h3>
+                        <div class="date">1988</div>
+                        <p>Introduction of the first comprehensive National Youth Policy to provide a framework for youth engagement and development.</p>
+                    </div>
+                </div>
+                
+                <!-- Timeline Item 4: Sports Authority of India -->
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <h3>Sports Authority of India</h3>
+                        <div class="date">1994</div>
+                        <p>Strengthening of the Sports Authority of India as the nodal agency for athletic training and infrastructure development.</p>
+                    </div>
+                </div>
+                
+                <!-- Timeline Item 5: Youth Connect Initiative -->
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <h3>Youth Connect Initiative</h3>
+                        <div class="date">2008</div>
+                        <p>Launch of youth-focused digital platforms to engage the next generation through technology and social media.</p>
+                    </div>
+                </div>
+                
+                <!-- Timeline Item 6: Khelo India Launch -->
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <h3>Khelo India Launch</h3>
+                        <div class="date">2018</div>
+                        <p>Introduction of the flagship Khelo India program to revitalize the sports culture at the grassroots level across the country.</p>
+                    </div>
+                </div>
+                
+                <!-- Timeline Item 7: Present Day -->
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <h3>Present Day</h3>
+                        <div class="date">2023</div>
+                        <p>Continued expansion of programs with focus on digital integration, international collaboration, and preparing for global sporting events.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section with Accordion -->
+        <section class="faq-section">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div class="accordion">
+                <!-- FAQ Item 1: Main Objective -->
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <h3>What is the main objective of Youth & Sports Empower?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="accordion-content-inner">
+                            <p>Our primary objective is to develop both youth and sports in India by creating comprehensive programs that provide opportunities for training, competition, and personal development. We aim to harness the potential of India's youth population while fostering sporting excellence at national and international levels.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 2: Accessing Sports Schemes -->
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <h3>How can young athletes access government sports schemes?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="accordion-content-inner">
+                            <p>Young athletes can access government sports schemes through multiple channels including:</p>
+                            <ul style="list-style-type: disc; margin-left: 20px; margin-top: 10px;">
+                                <li>School sports programs affiliated with our initiatives</li>
+                                <li>District and state-level sports authorities</li>
+                                <li>Sports Authority of India training centers</li>
+                                <li>Direct applications through our website for specific schemes</li>
+                                <li>Participation in Khelo India games and talent identification events</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 3: Volunteer Opportunities -->
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <h3>What youth volunteer opportunities are available?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="accordion-content-inner">
+                            <p>We offer several volunteer programs including the National Youth Corps, National Service Scheme (NSS), and event-specific volunteering opportunities. These programs focus on community development, social service, environmental conservation, disaster management, and sports event organization. Volunteers gain valuable leadership experience while contributing to national development goals.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 4: Sports Funding -->
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <h3>How are sports funds allocated to different disciplines?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="accordion-content-inner">
+                            <p>Sports funding is allocated based on a strategic framework that considers multiple factors:</p>
+                            <ul style="list-style-type: disc; margin-left: 20px; margin-top: 10px;">
+                                <li>Priority disciplines identified in the National Sports Policy</li>
+                                <li>Medal potential in international competitions</li>
+                                <li>Grassroots participation and popularity</li>
+                                <li>Infrastructure requirements and maintenance costs</li>
+                                <li>Coach development and training needs</li>
+                                <li>Historical performance and growth potential</li>
+                            </ul>
+                            <p style="margin-top: 10px;">Additionally, special allocations are made for para-sports, women's sports, and traditional/indigenous sports to ensure inclusive development.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 5: International Participation -->
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <h3>Can international athletes participate in Khelo India programs?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="accordion-content-inner">
+                            <p>Khelo India programs are primarily designed for Indian citizens to develop domestic sporting talent. However, we do organize select international competitions and exchange programs where foreign athletes can participate. For training collaborations, we have special provisions for joint camps and knowledge exchange with international sporting bodies and academies.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 6: Rural Sports Development -->
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <h3>How does the ministry support rural sports development?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="accordion-content-inner">
+                            <p>Rural sports development is a key priority, supported through:</p>
+                            <ul style="list-style-type: disc; margin-left: 20px; margin-top: 10px;">
+                                <li>The Panchayat Yuva Krida aur Khel Abhiyan (PYKKA) - developing playfields at village levels</li>
+                                <li>Mobile coaching teams that visit remote areas</li>
+                                <li>Special talent identification camps in rural districts</li>
+                                <li>Rural competitions feeding into state and national level events</li>
+                                <li>Training of local coaches and physical education teachers</li>
+                                <li>Provision of basic equipment to rural schools and community centers</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="schemes.html">Schemes</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="#">Annual Reports</a></li>
+                        <li><a href="#">Research Papers</a></li>
+                        <li><a href="#">Policies</a></li>
+                        <li><a href="#">Press Releases</a></li>
+                        <li><a href="#">FAQs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Connect With Us</h3>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                    <p class="contact-info">
+                        <i class="fas fa-phone"></i> Toll Free: 1800-XXX-XXXX<br>
+                        <i class="fas fa-envelope"></i> contact@youthsports.gov.in
+                    </p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Youth & Sports Empower. All Rights Reserved.</p>
+                <p>
+                    <a href="#">Privacy Policy</a> |
+                    <a href="#">Terms of Service</a> |
+                    <a href="#">Sitemap</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <button class="assistant-toggle" title="Voice Assistant">
+        <i class="fas fa-microphone"></i>
+    </button>
+
+    <div class="assistant-panel">
+        <div class="assistant-header">
+            <h3>Voice Assistant</h3>
+            <button class="close-assistant">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="voice-controls">
+            <button id="start-voice" title="Start Voice Recognition">
+                <i class="fas fa-microphone"></i>
+            </button>
+            <div class="voice-status">Click to speak</div>
+        </div>
+        <div class="voice-commands">
+            <h4>Available Commands:</h4>
+            <ul>
+                <li>"Go to [page name]" - Navigate to a page</li>
+                <li>"Read [section name]" - Read section content</li>
+                <li>"Dark mode" / "Light mode" - Toggle theme</li>
+                <li>"Help" - List available commands</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/chatbot.js" defer></script>
+    <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script src="/js/textchange.js"></script>
+    <script>
+        // Check and apply theme on page load
+        document.addEventListener('DOMContentLoaded', function () {
+            applyTheme();
+        });
+
+        // Apply saved theme function
+        function applyTheme() {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme) {
+                document.body.setAttribute('data-theme', savedTheme);
+                const icon = document.querySelector('.theme-toggle i');
+                if (icon) {
+                    if (savedTheme === 'dark') {
+                        icon.classList.remove('fa-moon');
+                        icon.classList.add('fa-sun');
+                    } else {
+                        icon.classList.remove('fa-sun');
+                        icon.classList.add('fa-moon');
+                    }
+                }
+                console.log('Applied saved theme:', savedTheme);
+            }
+        }
+
+        // Accordion functionality
+        const accordionItems = document.querySelectorAll('.accordion-item');
+
+        accordionItems.forEach(item => {
+            const header = item.querySelector('.accordion-header');
+            const content = item.querySelector('.accordion-content');
+
+            header.addEventListener('click', () => {
+                // Close all accordion items
+                accordionItems.forEach(otherItem => {
+                    if (otherItem !== item) {
+                        otherItem.classList.remove('active');
+                        otherItem.querySelector('.accordion-content').style.maxHeight = null;
+                    }
+                });
+
+                // Toggle current item
+                item.classList.toggle('active');
+
+                if (item.classList.contains('active')) {
+                    content.style.maxHeight = content.scrollHeight + "px";
+                } else {
+                    content.style.maxHeight = null;
+                }
+            });
+        });
+
+        // Timeline animation on scroll
+        function animateTimeline() {
+            const timelineItems = document.querySelectorAll('.timeline-item');
+
+            timelineItems.forEach(item => {
+                const itemPosition = item.getBoundingClientRect().top;
+                const screenPosition = window.innerHeight / 1.2;
+
+                if (itemPosition < screenPosition) {
+                    item.classList.add('animate');
+                    item.style.opacity = 1;
+                    item.style.transform = 'translateY(0)';
+                }
+            });
+        }
+
+        // Apply initial styles to timeline items
+        document.querySelectorAll('.timeline-item').forEach(item => {
+            item.style.opacity = 0;
+            item.style.transform = 'translateY(20px)';
+            item.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+        });
+
+        // Check for animations on scroll and load
+        window.addEventListener('scroll', animateTimeline);
+        window.addEventListener('load', animateTimeline);
+    </script>
+</body>
+
+</html>

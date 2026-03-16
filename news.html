@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta tags for character encoding and responsive viewport -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>News | Youth & Sports Empower</title>
+    
+    <!-- Favicon and CSS stylesheets -->
+    <link rel="shortcut icon" href="/assets/icons/pagephoto.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/news.css" />
+    <link rel="stylesheet" href="css/animations.css" />
+    <link rel="stylesheet" href="/css/textchange.css">
+    <link rel="stylesheet" href="css/chatbot.css">
+    <link rel="stylesheet" href="css/backgrounds.css" />
+    
+    <!-- External CSS libraries -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/voice-assistant.css">
+    <script src="js/voice-assistant.js"></script>
+</head>
+
+<body data-page="news">
+    <!-- Language selection dropdown for website translation -->
+    <select id="custom-translate">
+        <option value="en">🌐 English</option>
+        <option value="hi">🇮🇳 Hindi</option>
+        <option value="es">🇪🇸 Spanish</option>
+        <option value="fr">🇫🇷 French</option>
+        <option value="de">🇩🇪 German</option>
+        <option value="zh-CN">🇨🇳 Chinese</option>
+    </select>
+    
+    <!-- Google Translate widget (hidden but functional) -->
+    <div id="google_translate_element" style="display: none;"></div>
+    
+    <!-- Interactive Chatbot Interface -->
+    <div id="chatbot-container">
+        <div id="chatbot-header">🏅 Ask Me About Sports</div>
+        <div id="chat-box"></div>
+        <input type="text" id="chat-input" placeholder="Ask about football, cricket, etc..." />
+    </div>
+
+    <!-- Chatbot related files -->
+    <link rel="stylesheet" href="chatbot.css" />
+    <script src="chatbot.js" defer></script>
+
+    <!-- Main Header Section -->
+    <header>
+        <!-- Logo and Organization Name -->
+        <div class="logo">
+            <img src="assets/images/logo.png" alt="Youth & Sports Empower Logo">
+            <h1>Youth & Sports Empower</h1>
+        </div>
+        
+        <!-- Navigation Menu -->
+        <nav>
+            <!-- Mobile Menu Hamburger Icon -->
+            <div class="hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+            <!-- Navigation Links -->
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="news.html" class="active">News</a></li>
+                <li><a href="schemes.html">Schemes</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <!-- Dark/Light Theme Toggle -->
+        <div class="theme-toggle">
+            <i class="fas fa-moon"></i>
+        </div>
+    </header>
+
+    <main>
+        <!-- News Header Section with Search and Filters -->
+        <section class="news-header">
+            <h1>Latest News</h1>
+            <div class="header-controls">
+                <!-- Search Bar -->
+                <div class="search-container">
+                    <input type="text" id="searchBar" placeholder="Search News..." />
+                    <i class="fas fa-search search-icon"></i>
+                </div>
+                <!-- Category Filter Buttons -->
+                <div class="category-filters">
+                    <button class="category-btn active" data-category="all">All</button>
+                    <button class="category-btn" data-category="sports">Sports</button>
+                    <button class="category-btn" data-category="youth">Youth Programs</button>
+                    <button class="category-btn" data-category="announcements">Announcements</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured News Carousel -->
+        <section class="news-carousel">
+            <div class="carousel-container">
+                <!-- Carousel Slide 1: Youth Games -->
+                <div class="carousel-slide active">
+                    <img src="assets/images/news1.jpg" alt="Youth Games 2025" />
+                    <div class="carousel-content">
+                        <h2>Youth Games 2025 Announced</h2>
+                        <p>Khelo India Youth Games 2025 to be hosted in Pune with 30+ sports.</p>
+                    </div>
+                </div>
+                <!-- Carousel Slide 2: Rural Youth Scheme -->
+                <div class="carousel-slide">
+                    <img src="assets/images/news2.jpg" alt="Rural Youth Scheme" />
+                    <div class="carousel-content">
+                        <h2>New Scheme for Rural Youth</h2>
+                        <p>Govt launches rural sports initiative for underprivileged youth.</p>
+                    </div>
+                </div>
+                <!-- Carousel Slide 3: Asian Athletics -->
+                <div class="carousel-slide">
+                    <img src="assets/images/news3.jpg" alt="Asian Athletics" />
+                    <div class="carousel-content">
+                        <h2>India Bags Gold in Asian Athletics</h2>
+                        <p>India's youth athletes win big at the Asian Athletics Championships 2025.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Carousel Navigation Buttons -->
+            <button class="carousel-btn prev"><i class="fas fa-chevron-left"></i></button>
+            <button class="carousel-btn next"><i class="fas fa-chevron-right"></i></button>
+        </section>
+
+        <!-- News Articles Grid -->
+        <section class="news-container" id="newsContainer">
+            <!-- News Card 1: Youth Games -->
+            <div class="news-card" data-category="sports">
+                <img src="assets/images/news1.jpg" alt="News Image" />
+                <h3>Youth Games 2025 Announced</h3>
+                <p>Khelo India Youth Games 2025 to be hosted in Pune with 30+ sports.</p>
+                <div class="news-meta">
+                    <span class="category" data-category="sports">Sports</span>
+                    <span class="date">March 15, 2024</span>
+                </div>
+                <button onclick="readMore(this)">Read More</button>
+            </div>
+
+            <!-- News Card 2: Rural Youth Scheme -->
+            <div class="news-card" data-category="youth">
+                <img src="assets/images/news2.jpg" alt="News Image" />
+                <h3>New Scheme for Rural Youth</h3>
+                <p>Govt launches rural sports initiative for underprivileged youth.</p>
+                <div class="news-meta">
+                    <span class="category" data-category="youth">Youth Programs</span>
+                    <span class="date">March 14, 2024</span>
+                </div>
+                <button onclick="readMore(this)">Read More</button>
+            </div>
+
+            <!-- News Card 3: Asian Athletics -->
+            <div class="news-card" data-category="sports">
+                <img src="assets/images/news3.jpg" alt="News Image" />
+                <h3>India Bags Gold in Asian Athletics</h3>
+                <p>India's youth athletes win big at the Asian Athletics Championships 2025.</p>
+                <div class="news-meta">
+                    <span class="category" data-category="sports">Sports</span>
+                    <span class="date">March 13, 2024</span>
+                </div>
+                <button onclick="readMore(this)">Read More</button>
+            </div>
+
+            <!-- News Card 4: Fit India Movement -->
+            <div class="news-card" data-category="announcements">
+                <img src="assets/images/news4.jpg" alt="News Image" />
+                <h3>Fit India Movement Grows Stronger</h3>
+                <p>Over 1 million youth joined Fit India run in 2025 across 700 cities.</p>
+                <div class="news-meta">
+                    <span class="category" data-category="announcements">Announcements</span>
+                    <span class="date">March 12, 2024</span>
+                </div>
+                <button onclick="readMore(this)">Read More</button>
+            </div>
+
+            <!-- News Card 5: E-Sports League -->
+            <div class="news-card" data-category="youth">
+                <img src="assets/images/news5.jpg" alt="News Image" />
+                <h3>Launch of E-Sports League for Youth</h3>
+                <p>India announces the first ever government-backed youth e-sports league.</p>
+                <div class="news-meta">
+                    <span class="category" data-category="youth">Youth Programs</span>
+                    <span class="date">March 11, 2024</span>
+                </div>
+                <button onclick="readMore(this)">Read More</button>
+            </div>
+
+            <!-- News Card 6: Yoga Challenge -->
+            <div class="news-card" data-category="announcements">
+                <img src="assets/images/news6.jpg" alt="News Image" />
+                <h3>Yoga Challenge 2025</h3>
+                <p>Govt announces Yoga Challenge 2025 with national-level competitions.</p>
+                <div class="news-meta">
+                    <span class="category" data-category="announcements">Announcements</span>
+                    <span class="date">March 10, 2024</span>
+                </div>
+                <button onclick="readMore(this)">Read More</button>
+            </div>
+        </section>
+
+        <!-- News Article Modal -->
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <div class="modal-header">
+                    <h2 id="modalTitle"></h2>
+                    <div class="modal-meta">
+                        <span id="modalCategory"></span>
+                        <span id="modalDate"></span>
+                    </div>
+                </div>
+                <img id="modalImage" src="" alt="News Image" />
+                <div class="modal-body">
+                    <p id="modalBody"></p>
+                    <div id="modalFullContent"></div>
+                </div>
+                <div class="modal-footer">
+                    <button onclick="closeModal()">Close</button>
+                    <button onclick="shareNews()">Share</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Voice Assistant Toggle Button -->
+    <button class="assistant-toggle" title="Voice Assistant">
+        <i class="fas fa-microphone"></i>
+    </button>
+
+    <!-- Voice Assistant Panel -->
+    <div class="assistant-panel">
+        <div class="assistant-header">
+            <h3>Voice Assistant</h3>
+            <button class="close-assistant">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="voice-controls">
+            <button id="start-voice" title="Start Voice Recognition">
+                <i class="fas fa-microphone"></i>
+            </button>
+            <div class="voice-status">Click to speak</div>
+        </div>
+        <div class="voice-commands">
+            <h4>Available Commands:</h4>
+            <ul>
+                <li>"Go to [page name]" - Navigate to a page</li>
+                <li>"Read [section name]" - Read section content</li>
+                <li>"Dark mode" / "Light mode" - Toggle theme</li>
+                <li>"Help" - List available commands</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="news.html">News</a></li>
+                        <li><a href="schemes.html">Schemes</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="#">Annual Reports</a></li>
+                        <li><a href="#">Research Papers</a></li>
+                        <li><a href="#">Policies</a></li>
+                        <li><a href="#">Press Releases</a></li>
+                        <li><a href="#">FAQs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Connect With Us</h3>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                    <p class="contact-info">
+                        <i class="fas fa-phone"></i> Toll Free: 1800-XXX-XXXX<br>
+                        <i class="fas fa-envelope"></i> contact@youthsports.gov.in
+                    </p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Youth & Sports Empower. All Rights Reserved.</p>
+                <p>
+                    <a href="#">Privacy Policy</a> |
+                    <a href="#">Terms of Service</a> |
+                    <a href="#">Sitemap</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Load scripts at the end of body -->
+    <script src="js/main.js"></script>
+    <script src="js/chatbot.js" defer></script>
+    <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script src="/js/textchange.js"></script>
+    <script src="js/news.js"></script>
+    <script>
+        // Initialize carousel
+        document.addEventListener('DOMContentLoaded', function () {
+            // Start carousel
+            let carouselInterval = setInterval(nextSlide, 5000);
+
+            // Initialize theme
+            const themeToggle = document.querySelector('.theme-toggle');
+            if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                document.body.classList.add('dark');
+                themeToggle.querySelector('i').classList.replace('fa-moon', 'fa-sun');
+            }
+
+            // Initialize search
+            const searchBar = document.getElementById('searchBar');
+            if (searchBar) {
+                searchBar.addEventListener('keyup', function () {
+                    const filter = this.value.toLowerCase();
+                    const activeCategory = document.querySelector('.category-btn.active').dataset.category;
+
+                    document.querySelectorAll('.news-card').forEach(card => {
+                        const title = card.querySelector('h3').innerText.toLowerCase();
+                        const content = card.querySelector('p').innerText.toLowerCase();
+                        const category = card.dataset.category;
+
+                        const matchesSearch = title.includes(filter) || content.includes(filter);
+                        const matchesCategory = activeCategory === 'all' || category === activeCategory;
+
+                        card.style.display = (matchesSearch && matchesCategory) ? '' : 'none';
+                    });
+                });
+            }
+
+            // Initialize category filters
+            document.querySelectorAll('.category-btn').forEach(button => {
+                button.addEventListener('click', function () {
+                    document.querySelectorAll('.category-btn').forEach(btn => btn.classList.remove('active'));
+                    this.classList.add('active');
+
+                    const category = this.dataset.category;
+                    document.querySelectorAll('.news-card').forEach(card => {
+                        card.style.display = (category === 'all' || card.dataset.category === category) ? '' : 'none';
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

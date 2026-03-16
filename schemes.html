@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta tags for character encoding and responsive viewport -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schemes | Youth & Sports Empower</title>
+    
+    <!-- Favicon and CSS stylesheets -->
+    <link rel="shortcut icon" href="/assets/icons/pagephoto.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="/css/textchange.css">
+    <link rel="stylesheet" href="css/chatbot.css">
+    <link rel="stylesheet" href="css/backgrounds.css">
+    
+    <!-- External CSS libraries -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/schemes.css">
+    <link rel="stylesheet" href="css/voice-assistant.css">
+    <script src="js/voice-assistant.js"></script>
+</head>
+
+<body data-page="schemes">
+    <!-- Language selection dropdown for website translation -->
+    <select id="custom-translate">
+        <option value="en">🌐 English</option>
+        <option value="hi">🇮🇳 Hindi</option>
+        <option value="es">🇪🇸 Spanish</option>
+        <option value="fr">🇫🇷 French</option>
+        <option value="de">🇩🇪 German</option>
+        <option value="zh-CN">🇨🇳 Chinese</option>
+    </select>
+    
+    <!-- Google Translate widget (hidden but functional) -->
+    <div id="google_translate_element" style="display: none;"></div>
+    
+    <!-- Interactive Chatbot Interface -->
+    <div id="chatbot-container">
+        <div id="chatbot-header">🏅 Ask Me About Sports</div>
+        <div id="chat-box"></div>
+        <input type="text" id="chat-input" placeholder="Ask about football, cricket, etc..." />
+    </div>
+
+    <!-- Chatbot related files -->
+    <link rel="stylesheet" href="chatbot.css" />
+    <script src="chatbot.js" defer></script>
+
+    <!-- Main Header Section -->
+    <header>
+        <!-- Logo and Organization Name -->
+        <div class="logo">
+            <img src="assets/images/logo.png" alt="Youth & Sports Empower Logo">
+            <h1>Youth & Sports Empower</h1>
+        </div>
+        
+        <!-- Navigation Menu -->
+        <nav>
+            <!-- Mobile Menu Hamburger Icon -->
+            <div class="hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+            <!-- Navigation Links -->
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="schemes.html" class="active">Schemes</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <!-- Dark/Light Theme Toggle -->
+        <div class="theme-toggle">
+            <i class="fas fa-moon"></i>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section for Schemes -->
+        <section class="schemes-hero">
+            <h1>Government Schemes</h1>
+            <p>Discover opportunities for youth development and sports excellence</p>
+        </section>
+
+        <!-- Schemes Filter Section -->
+        <section class="schemes-filter">
+            <!-- Search Box for Schemes -->
+            <div class="search-box">
+                <input type="text" id="scheme-search" placeholder="Search schemes...">
+                <i class="fas fa-search"></i>
+            </div>
+            <!-- Filter Options -->
+            <div class="filter-options">
+                <!-- Scheme Type Filter -->
+                <select id="type-filter">
+                    <option value="all">All Types</option>
+                    <option value="sports">Sports</option>
+                    <option value="education">Education</option>
+                    <option value="skill">Skill Development</option>
+                    <option value="entrepreneurship">Entrepreneurship</option>
+                </select>
+                <!-- Eligibility Filter -->
+                <select id="eligibility-filter">
+                    <option value="all">All Eligibility</option>
+                    <option value="junior">Junior (Under 18)</option>
+                    <option value="senior">Senior (18-25)</option>
+                    <option value="all-ages">All Ages</option>
+                </select>
+            </div>
+        </section>
+
+        <!-- Schemes Grid Section -->
+        <section class="schemes-grid">
+            <h2>Available Schemes</h2>
+            <div class="schemes-container">
+                <!-- Scheme Card 1: Khelo India -->
+                <div class="scheme-card" data-type="sports" data-eligibility="all-ages">
+                    <div class="scheme-icon">
+                        <i class="fas fa-running"></i>
+                    </div>
+                    <div class="scheme-content">
+                        <h3>Khelo India</h3>
+                        <p class="scheme-description">Reviving sports culture at the grassroots level through
+                            competitions and talent identification.</p>
+                        <div class="scheme-details">
+                            <div class="detail-item">
+                                <i class="fas fa-rupee-sign"></i>
+                                <span>Up to ₹5 Lakhs</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-calendar-alt"></i>
+                                <span>Year-round</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-users"></i>
+                                <span>All Ages</span>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn-details">View Details</button>
+                </div>
+
+                <!-- Scheme Card 2: National Youth Corps -->
+                <div class="scheme-card" data-type="education" data-eligibility="senior">
+                    <div class="scheme-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="scheme-content">
+                        <h3>National Youth Corps</h3>
+                        <p class="scheme-description">Engaging youth in voluntary social service and community
+                            development programs.</p>
+                        <div class="scheme-details">
+                            <div class="detail-item">
+                                <i class="fas fa-rupee-sign"></i>
+                                <span>Monthly Stipend</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-calendar-alt"></i>
+                                <span>2 Years</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-users"></i>
+                                <span>18-25 Years</span>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn-details">View Details</button>
+                </div>
+
+                <!-- Scheme Card 3: Skill Development Program -->
+                <div class="scheme-card" data-type="skill" data-eligibility="all-ages">
+                    <div class="scheme-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <div class="scheme-content">
+                        <h3>Skill Development Program</h3>
+                        <p class="scheme-description">Vocational training and skill enhancement for youth employment.
+                        </p>
+                        <div class="scheme-details">
+                            <div class="detail-item">
+                                <i class="fas fa-rupee-sign"></i>
+                                <span>Free Training</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-calendar-alt"></i>
+                                <span>3-6 Months</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-users"></i>
+                                <span>All Ages</span>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn-details">View Details</button>
+                </div>
+
+                <!-- Scheme Card 4: Startup India Youth Program -->
+                <div class="scheme-card" data-type="entrepreneurship" data-eligibility="senior">
+                    <div class="scheme-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <div class="scheme-content">
+                        <h3>Startup India Youth Program</h3>
+                        <p class="scheme-description">Supporting youth entrepreneurs with funding, mentorship, and
+                            business development resources.</p>
+                        <div class="scheme-details">
+                            <div class="detail-item">
+                                <i class="fas fa-rupee-sign"></i>
+                                <span>Up to ₹10 Lakhs</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-calendar-alt"></i>
+                                <span>3 Years</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-users"></i>
+                                <span>18-35 Years</span>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn-details">View Details</button>
+                </div>
+
+                <!-- Scheme Card 5: Target Olympic Podium -->
+                <div class="scheme-card" data-type="sports" data-eligibility="junior">
+                    <div class="scheme-icon">
+                        <i class="fas fa-medal"></i>
+                    </div>
+                    <div class="scheme-content">
+                        <h3>Target Olympic Podium</h3>
+                        <p class="scheme-description">Elite training program for young athletes with potential for
+                            Olympic success, providing international exposure.</p>
+                        <div class="scheme-details">
+                            <div class="detail-item">
+                                <i class="fas fa-rupee-sign"></i>
+                                <span>Up to ₹50,000/month</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-calendar-alt"></i>
+                                <span>Olympic Cycle</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-users"></i>
+                                <span>Under 18</span>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn-details">View Details</button>
+                </div>
+
+                <!-- Scheme Card 6: Sports Scholarship Program -->
+                <div class="scheme-card" data-type="education" data-eligibility="all-ages">
+                    <div class="scheme-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <div class="scheme-content">
+                        <h3>Sports Scholarship Program</h3>
+                        <p class="scheme-description">Academic scholarships for student athletes balancing sports
+                            excellence with education.</p>
+                        <div class="scheme-details">
+                            <div class="detail-item">
+                                <i class="fas fa-rupee-sign"></i>
+                                <span>Full Tuition</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-calendar-alt"></i>
+                                <span>Academic Year</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-users"></i>
+                                <span>All Ages</span>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn-details">View Details</button>
+                </div>
+
+                <!-- New Scheme Cards -->
+                <div class="scheme-card" data-type="skill" data-eligibility="senior">
+                    <div class="scheme-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <div class="scheme-content">
+                        <h3>Digital Skills Initiative</h3>
+                        <p class="scheme-description">Training in digital technologies, coding, and software development
+                            for career advancement in tech.</p>
+                        <div class="scheme-details">
+                            <div class="detail-item">
+                                <i class="fas fa-rupee-sign"></i>
+                                <span>Subsidized Courses</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-calendar-alt"></i>
+                                <span>6-12 Months</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-users"></i>
+                                <span>18-30 Years</span>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn-details">View Details</button>
+                </div>
+
+                <div class="scheme-card" data-type="entrepreneurship" data-eligibility="all-ages">
+                    <div class="scheme-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="scheme-content">
+                        <h3>Rural Sports Enterprise</h3>
+                        <p class="scheme-description">Promoting entrepreneurship in sports-related businesses in rural
+                            areas with special incentives.</p>
+                        <div class="scheme-details">
+                            <div class="detail-item">
+                                <i class="fas fa-rupee-sign"></i>
+                                <span>Low-interest loans</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-calendar-alt"></i>
+                                <span>5 Years</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-users"></i>
+                                <span>All Ages</span>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn-details">View Details</button>
+                </div>
+
+                <div class="scheme-card" data-type="sports" data-eligibility="junior">
+                    <div class="scheme-icon">
+                        <i class="fas fa-dumbbell"></i>
+                    </div>
+                    <div class="scheme-content">
+                        <h3>Young Athlete Development</h3>
+                        <p class="scheme-description">Comprehensive physical training and coaching for promising junior
+                            athletes in Olympic sports.</p>
+                        <div class="scheme-details">
+                            <div class="detail-item">
+                                <i class="fas fa-rupee-sign"></i>
+                                <span>Free Coaching</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-calendar-alt"></i>
+                                <span>Ongoing</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-users"></i>
+                                <span>10-16 Years</span>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn-details">View Details</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Scheme Details Modal -->
+        <div id="scheme-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <div id="scheme-details-content">
+                    <!-- Content will be populated by JavaScript -->
+                </div>
+                <div class="application-section">
+                    <h3>Apply Now</h3>
+                    <form id="scheme-application-form">
+                        <div class="form-group">
+                            <label for="applicant-name">Full Name</label>
+                            <input type="text" id="applicant-name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="applicant-email">Email</label>
+                            <input type="email" id="applicant-email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="applicant-phone">Phone Number</label>
+                            <input type="tel" id="applicant-phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="applicant-age">Age</label>
+                            <input type="number" id="applicant-age" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="applicant-documents">Upload Documents</label>
+                            <input type="file" id="applicant-documents" multiple>
+                        </div>
+                        <button type="submit" class="btn">Submit Application</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="schemes.html">Schemes</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="#">Annual Reports</a></li>
+                        <li><a href="#">Research Papers</a></li>
+                        <li><a href="#">Policies</a></li>
+                        <li><a href="#">Press Releases</a></li>
+                        <li><a href="#">FAQs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Connect With Us</h3>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Youth & Sports Empower. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Voice Assistant Toggle Button -->
+    <button class="assistant-toggle" title="Voice Assistant">
+        <i class="fas fa-microphone"></i>
+    </button>
+
+    <!-- Voice Assistant Panel -->
+    <div class="assistant-panel">
+        <div class="assistant-header">
+            <h3>Voice Assistant</h3>
+            <button class="close-assistant">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="voice-controls">
+            <button id="start-voice" title="Start Voice Recognition">
+                <i class="fas fa-microphone"></i>
+            </button>
+            <div class="voice-status">Click to speak</div>
+        </div>
+        <div class="voice-commands">
+            <h4>Available Commands:</h4>
+            <ul>
+                <li>"Go to [page name]" - Navigate to a page</li>
+                <li>"Read [section name]" - Read section content</li>
+                <li>"Dark mode" / "Light mode" - Toggle theme</li>
+                <li>"Help" - List available commands</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/chatbot.js" defer></script>
+    <script src="js/schemes.js"></script>
+    <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script src="/js/textchange.js"></script>
+</body>
+
+</html>

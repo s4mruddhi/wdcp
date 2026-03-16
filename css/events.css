@@ -1,0 +1,379 @@
+/* Events Page Styles */
+
+/* Hero Section */
+.events-hero {
+    margin-top: 80px;
+    padding: 4rem 5%;
+    text-align: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../assets/images/events-hero.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+.events-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.events-hero p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* Filter Section */
+.events-filter {
+    padding: 2rem 5%;
+    background: var(--card-bg);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.search-box {
+    position: relative;
+    flex: 1;
+    min-width: 250px;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    padding-right: 3rem;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.search-box i {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--light-text);
+}
+
+.filter-options {
+    display: flex;
+    gap: 1rem;
+}
+
+.filter-options select {
+    padding: 0.8rem 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 1rem;
+    background: var(--background);
+    color: var(--text-color);
+}
+
+/* Calendar Section */
+.events-calendar {
+    padding: 2rem 5%;
+    background: var(--background);
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.calendar-header button {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.calendar-grid {
+    background: var(--card-bg);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.calendar-days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    background: var(--primary-color);
+    color: white;
+    padding: 1rem 0;
+}
+
+.calendar-days span {
+    text-align: center;
+    font-weight: 500;
+}
+
+.calendar-dates {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 1px;
+    background: var(--border-color);
+}
+
+.calendar-date {
+    background: var(--background);
+    aspect-ratio: 1;
+    padding: 0.5rem;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.calendar-date:hover {
+    background: var(--card-bg);
+}
+
+.calendar-date.has-event {
+    position: relative;
+}
+
+.calendar-date.has-event::after {
+    content: '';
+    position: absolute;
+    bottom: 0.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 6px;
+    height: 6px;
+    background: var(--primary-color);
+    border-radius: 50%;
+}
+
+/* Events Grid */
+.upcoming-events {
+    padding: 4rem 5%;
+    background: var(--card-bg);
+}
+
+.upcoming-events h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.events-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.event-card {
+    background: var(--background);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: var(--transition);
+}
+
+.event-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+.event-date {
+    background: var(--primary-color);
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+.event-date .day {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.event-date .month {
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+.event-details {
+    padding: 1.5rem;
+}
+
+.event-details h3 {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.event-location {
+    color: var(--light-text);
+    margin-bottom: 0.5rem;
+}
+
+.event-location i {
+    color: var(--primary-color);
+    margin-right: 0.5rem;
+}
+
+.event-description {
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+
+.event-meta {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+    color: var(--light-text);
+}
+
+.event-meta span i {
+    margin-right: 0.5rem;
+    color: var(--primary-color);
+}
+
+.btn-register {
+    width: 100%;
+    padding: 0.8rem;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 0 0 8px 8px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.btn-register:hover {
+    background: var(--secondary-color);
+}
+
+/* Registration Modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.modal.active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background: var(--background);
+    padding: 2rem;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+}
+
+.close-modal {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--light-text);
+}
+
+.modal-content h2 {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 1rem;
+    background: var(--background);
+    color: var(--text-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .events-hero h1 {
+        font-size: 2rem;
+    }
+
+    .events-filter {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .filter-options {
+        flex-direction: column;
+    }
+
+    .calendar-date {
+        font-size: 0.9rem;
+    }
+
+    .event-card {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+}
+
+/* Dark mode event card improvements */
+[data-theme="dark"] .event-card {
+    background: #2c2c2c;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+[data-theme="dark"] .event-details {
+    background: #2c2c2c;
+}
+
+[data-theme="dark"] .event-description {
+    color: #cccccc;
+}
+
+[data-theme="dark"] .event-meta {
+    color: #cccccc;
+}
+
+[data-theme="dark"] .event-location {
+    color: #cccccc;
+}
+
+[data-theme="dark"] .calendar-dates .date-cell {
+    background: #2c2c2c;
+    color: #ffffff;
+    border: 1px solid #444444;
+}
+
+[data-theme="dark"] .calendar-dates .date-cell.has-event {
+    background: #3a3a3a;
+}
+
+[data-theme="dark"] .event-tooltip {
+    background: #3a3a3a;
+    border: 1px solid #444444;
+    color: #ffffff;
+}
+
+[data-theme="dark"] .no-results-message {
+    background: #2c2c2c;
+    color: #ffffff;
+    border: 1px solid #444444;
+} 

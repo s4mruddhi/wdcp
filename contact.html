@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta tags for character encoding and responsive viewport -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Youth & Sports Empower | Contact</title>
+    
+    <!-- Favicon and CSS stylesheets -->
+    <link rel="shortcut icon" href="/assets/icons/pagephoto.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="/css/textchange.css">
+    <link rel="stylesheet" href="css/chatbot.css">
+    <link rel="stylesheet" href="css/backgrounds.css">
+    
+    <!-- External CSS libraries -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/voice-assistant.css">
+    <script src="js/voice-assistant.js"></script>
+</head>
+
+<body data-page="contact">
+    <!-- Language selection dropdown for website translation -->
+    <select id="custom-translate">
+        <option value="en">🌐 English</option>
+        <option value="hi">🇮🇳 Hindi</option>
+        <option value="es">🇪🇸 Spanish</option>
+        <option value="fr">🇫🇷 French</option>
+        <option value="de">🇩🇪 German</option>
+        <option value="zh-CN">🇨🇳 Chinese</option>
+    </select>
+    
+    <!-- Google Translate widget (hidden but functional) -->
+    <div id="google_translate_element" style="display: none;"></div>
+    
+    <!-- Interactive Chatbot Interface -->
+    <div id="chatbot-container">
+        <div id="chatbot-header">🏅 Ask Me About Sports</div>
+        <div id="chat-box"></div>
+        <input type="text" id="chat-input" placeholder="Ask about football, cricket, etc..." />
+    </div>
+
+    <!-- Chatbot related files -->
+    <link rel="stylesheet" href="chatbot.css" />
+    <script src="chatbot.js" defer></script>
+
+    <!-- Main Header Section -->
+    <header>
+        <!-- Logo and Organization Name -->
+        <div class="logo">
+            <img src="assets/images/logo.png" alt="Youth & Sports Empower Logo">
+            <h1>Youth & Sports Empower</h1>
+        </div>
+        
+        <!-- Navigation Menu -->
+        <nav>
+            <!-- Mobile Menu Hamburger Icon -->
+            <div class="hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+            <!-- Navigation Links -->
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="schemes.html">Schemes</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </nav>
+        <!-- Dark/Light Theme Toggle -->
+        <div class="theme-toggle">
+            <i class="fas fa-moon"></i>
+        </div>
+    </header>
+
+    <main>
+        <!-- Contact Hero Section -->
+        <section class="contact-hero">
+            <h1>Contact Us</h1>
+            <p>Get in touch with us for any queries or support</p>
+        </section>
+
+        <!-- Contact Information Cards -->
+        <section class="contact-info">
+            <!-- Phone Information Card -->
+            <div class="info-card">
+                <i class="fas fa-phone"></i>
+                <h3>Phone</h3>
+                <p>Toll Free: 1800-XXX-XXXX</p>
+                <p>Direct: +91-XXX-XXXXXXX</p>
+            </div>
+            <!-- Email Information Card -->
+            <div class="info-card">
+                <i class="fas fa-envelope"></i>
+                <h3>Email</h3>
+                <p>General: contact@youthsports.gov.in</p>
+                <p>Support: support@youthsports.gov.in</p>
+            </div>
+            <!-- Working Hours Information Card -->
+            <div class="info-card">
+                <i class="fas fa-clock"></i>
+                <h3>Working Hours</h3>
+                <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
+                <p>Saturday: 9:00 AM - 1:00 PM</p>
+            </div>
+        </section>
+
+        <!-- Contact Form and Office Locations Section -->
+        <section class="contact-content">
+            <!-- Contact Form Container -->
+            <div class="contact-form-container">
+                <h2>Send us a Message</h2>
+                <form id="contact-form" class="contact-form">
+                    <!-- Name Input Field -->
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <!-- Email Input Field -->
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <!-- Phone Number Input Field -->
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                    <!-- Subject Selection Dropdown -->
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <select id="subject" name="subject" required>
+                            <option value="">Select Subject</option>
+                            <option value="general">General Inquiry</option>
+                            <option value="scheme">Scheme Information</option>
+                            <option value="event">Event Registration</option>
+                            <option value="support">Technical Support</option>
+                            <option value="feedback">Feedback</option>
+                        </select>
+                    </div>
+                    <!-- Message Text Area -->
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <!-- Submit Button -->
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
+            </div>
+
+            <!-- Office Locations Section -->
+            <div class="office-locations">
+                <h2>Our Offices</h2>
+                <div class="location-cards">
+                    <!-- Head Office Card -->
+                    <div class="location-card">
+                        <h3>Head Office</h3>
+                        <p><i class="fas fa-map-marker-alt"></i> Shastri Bhawan, New Delhi</p>
+                        <p><i class="fas fa-phone"></i> +91-XXX-XXXXXXX</p>
+                        <p><i class="fas fa-envelope"></i> delhi@youthsports.gov.in</p>
+                    </div>
+                    <!-- Mumbai Regional Office Card -->
+                    <div class="location-card">
+                        <h3>Regional Office - Mumbai</h3>
+                        <p><i class="fas fa-map-marker-alt"></i> Bandra Kurla Complex, Mumbai</p>
+                        <p><i class="fas fa-phone"></i> +91-XXX-XXXXXXX</p>
+                        <p><i class="fas fa-envelope"></i> mumbai@youthsports.gov.in</p>
+                    </div>
+                    <!-- Bangalore Regional Office Card -->
+                    <div class="location-card">
+                        <h3>Regional Office - Bangalore</h3>
+                        <p><i class="fas fa-map-marker-alt"></i> Koramangala, Bangalore</p>
+                        <p><i class="fas fa-phone"></i> +91-XXX-XXXXXXX</p>
+                        <p><i class="fas fa-envelope"></i> bangalore@youthsports.gov.in</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Google Maps Section -->
+        <section class="map-section">
+            <h2>Find Us</h2>
+            <div id="map" class="map-container">
+                <!-- Embedded Google Maps iframe -->
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.9024424303395!2d77.2065323!3d28.6139391!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd5a8a0a0a0f%3A0x0!2sShastri%20Bhawan!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin"
+                    width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy">
+                </iframe>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-container">
+                <!-- FAQ Item 1: Scheme Application -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How can I apply for a scheme?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>You can apply for schemes through our website by visiting the Schemes page and clicking on the "Apply Now" button for your chosen scheme. Make sure to have all required documents ready before applying.</p>
+                    </div>
+                </div>
+                <!-- FAQ Item 2: Required Documents -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What documents are required for scheme applications?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Required documents typically include proof of identity, age, address, and relevant certificates. Specific requirements vary by scheme and are listed in the scheme details.</p>
+                    </div>
+                </div>
+                <!-- FAQ Item 3: Application Status -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How can I track my application status?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>You can track your application status by logging into your account on our website or by contacting our support team with your application reference number.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-links">
+                <!-- Quick Links Column -->
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="schemes.html">Schemes</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <!-- Resources Column -->
+                <div class="footer-column">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="#">Annual Reports</a></li>
+                        <li><a href="#">Research Papers</a></li>
+                        <li><a href="#">Policies</a></li>
+                        <li><a href="#">Press Releases</a></li>
+                        <li><a href="#">FAQs</a></li>
+                    </ul>
+                </div>
+                <!-- Social Media Links Column -->
+                <div class="footer-column">
+                    <h3>Connect With Us</h3>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <!-- Copyright Notice -->
+            <div class="footer-bottom">
+                <p>&copy; 2024 Youth & Sports Empower. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Voice Assistant Toggle Button -->
+    <button class="assistant-toggle" title="Voice Assistant">
+        <i class="fas fa-microphone"></i>
+    </button>
+
+    <!-- Voice Assistant Panel -->
+    <div class="assistant-panel">
+        <div class="assistant-header">
+            <h3>Voice Assistant</h3>
+            <button class="close-assistant">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="voice-controls">
+            <button id="start-voice" title="Start Voice Recognition">
+                <i class="fas fa-microphone"></i>
+            </button>
+            <div class="voice-status">Click to speak</div>
+        </div>
+        <div class="voice-commands">
+            <h4>Available Commands:</h4>
+            <ul>
+                <li>"Go to [page name]" - Navigate to a page</li>
+                <li>"Read [section name]" - Read section content</li>
+                <li>"Dark mode" / "Light mode" - Toggle theme</li>
+                <li>"Help" - List available commands</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/chatbot.js" defer></script>
+    <script src="js/contact.js"></script>
+    <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script src="/js/textchange.js"></script>
+</body>
+
+</html>
